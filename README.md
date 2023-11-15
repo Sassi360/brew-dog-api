@@ -15,9 +15,9 @@ Retrieve data from the BrewDog API using the provided URL: [https://api.punkapi.
 3. Exclude any beers that contain Centennial hops from the results.
 
 ## To-Do:
-- [x] Set up Vue and Nuxt project structure.
-- [x] Retrieve data from the BrewDog API using the provided URL.
-- [ ] Create components to display Name, Tagline, Description, Image, ABV, and IBU.
+- [X] Set up Vue and Nuxt project structure.
+- [X] Retrieve data from the BrewDog API using the provided URL.
+- [X] Create components to display Name, Tagline, Description, Image, ABV, and IBU.
 - [ ] Implement warning for lactose and highlight for dry-hopped beers.
 - [ ] Implement sorting of beers in ascending order based on ABV.
 - [ ] Exclude beers containing Centennial hops from the results.

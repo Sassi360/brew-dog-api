@@ -4,6 +4,11 @@
 
     <template v-for="beer in beers" :key="beer.id">
         <h2>{{ beer.name }}</h2>
+        <p>{{ beer.tagline }}</p>
+        <p>{{ beer.description }}</p>
+        <img :src="beer.image_url" alt="Beer Image">
+        <p>ABV: {{ beer.abv }}</p>
+        <p>IBU: {{ beer.ibu }}</p>
     </template>
 
     <button @click="refresh">Refresh Data</button>
