@@ -1,75 +1,15 @@
-# Nuxt 3 Minimal Starter
+# Coding Assessment - Nov/14/2023
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Retrieve data from the BrewDog API using the provided URL: [https://api.punkapi.com/v2/beers?brewed_after=11-2012](https://api.punkapi.com/v2/beers?brewed_after=11-2012). Utilize Vue and Nuxt frameworks to present the following information for each beer:
 
-## Setup
+- **Name**
+- **Tagline**
+- **Description**
+- **Image**
+- **ABV (Alcohol By Volume)**
+- **IBU (International Bitterness Units)**
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+#### Requirements:
+1. Implement a warning if the beer contains lactose and a highlight if it is dry-hopped.
+2. Arrange the displayed beers in ascending order based on their ABV.
+3. Exclude any beers that contain Centennial hops from the results.
