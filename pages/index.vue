@@ -28,6 +28,9 @@ const { data: beers, pending, error, refresh } = useAsyncData('beers', async () 
         beer.isDryHopped = beer.ingredients.hops && beer.ingredients.hops.some(hop => hop.add === 'dry hop');
     })
 
+    // Sort beers by ABV
+    beers.sort((a, b) => a.abv - b.abv)
+
     return beers
 })
 </script>
