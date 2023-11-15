@@ -5,7 +5,7 @@
     <template v-for="beer in beers" :key="beer.id">
         <h2>{{ beer.name }}</h2>
         <p>{{ beer.tagline }}</p>
-        <p>{{ beer.description }}</p>\
+        <p>{{ beer.description }}</p>
         <p>ABV: {{ beer.abv }}</p>
         <p>IBU: {{ beer.ibu }}</p>
         <img :src="beer.image_url" alt="Image of {{ beer.name }}">
@@ -30,6 +30,9 @@ const { data: beers, pending, error, refresh } = useAsyncData('beers', async () 
 
     // Sort beers by ABV
     beers.sort((a, b) => a.abv - b.abv)
+
+    // Filter out beers with Centennial hops
+    beers = beers.filter(beer => beer.ingredients.hops && !beer.ingredients.hops.some(hop => hop.name === 'Centennial'))
 
     return beers
 })
