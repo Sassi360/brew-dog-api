@@ -16,7 +16,7 @@ Retrieve data from the BrewDog API using the provided URL: [https://api.punkapi.
 
 ## To-Do:
 - [x] Set up Vue and Nuxt project structure.
-- [ ] Retrieve data from the BrewDog API using the provided URL.
+- [x] Retrieve data from the BrewDog API using the provided URL.
 - [ ] Create components to display Name, Tagline, Description, Image, ABV, and IBU.
 - [ ] Implement warning for lactose and highlight for dry-hopped beers.
 - [ ] Implement sorting of beers in ascending order based on ABV.
