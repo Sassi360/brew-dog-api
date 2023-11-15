@@ -21,10 +21,10 @@ Retrieve data from the BrewDog API using the provided URL: [https://api.punkapi.
 - [X] Implement warning for lactose and highlight for dry-hopped beers.
 - [X] Implement sorting of beers in ascending order based on ABV.
 - [X] Exclude beers containing Centennial hops from the results.
-- [ ] Handle edge cases, such as API errors or no data returned.
+- [X] Handle edge cases, such as API errors or no data returned.
 - [X] Ensure responsive design for various screen sizes.
-- [ ] Optimize performance, considering potential large datasets.
-- [ ] Implement error handling and logging for debugging purposes.
+- [X] Optimize performance, considering potential large datasets.
+- [X] Implement error handling and logging for debugging purposes.
 - [X] Update README with detailed project instructions, setup, and usage information.
 
 ---
