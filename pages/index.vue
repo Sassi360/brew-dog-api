@@ -5,10 +5,13 @@
     <template v-for="beer in beers" :key="beer.id">
         <h2>{{ beer.name }}</h2>
         <p>{{ beer.tagline }}</p>
-        <p>{{ beer.description }}</p>
-        <img :src="beer.image_url" alt="Beer Image">
+        <p>{{ beer.description }}</p>\
         <p>ABV: {{ beer.abv }}</p>
         <p>IBU: {{ beer.ibu }}</p>
+        <img :src="beer.image_url" alt="Image of {{ beer.name }}">
+        <p v-if="beer.isLactose" class="warning">Contains Lactose</p>
+        <p v-if="beer.isDryHopped" class="highlight">Dry Hopped</p>
+
     </template>
 
     <button @click="refresh">Refresh Data</button>
@@ -19,6 +22,28 @@ const { data: beers, pending, error, refresh } = useAsyncData('beers', async () 
     const response = await fetch('https://api.punkapi.com/v2/beers?brewed_after=11-2012')
     let beers = await response.json()
 
+    // Insert new properties for lactose and dry-hopping
+    beers.forEach(beer => {
+        beer.isLactose = beer.ingredients.hops && beer.ingredients.hops.some(hops => hops.name === 'Lactose');
+        beer.isDryHopped = beer.ingredients.hops && beer.ingredients.hops.some(hop => hop.add === 'dry hop');
+    })
+
     return beers
 })
 </script>
+
+
+
+<style >
+.warning {
+    color: #e63946;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.highlight {
+    background-color: #ffc300;
+    color: #000000;
+    padding: 5px;
+}
+</style>
