@@ -25,4 +25,31 @@ Retrieve data from the BrewDog API using the provided URL: [https://api.punkapi.
 - [X] Ensure responsive design for various screen sizes.
 - [ ] Optimize performance, considering potential large datasets.
 - [ ] Implement error handling and logging for debugging purposes.
-- [ ] Update README with detailed project instructions, setup, and usage information.
+- [X] Update README with detailed project instructions, setup, and usage information.
+
+---
+## Setup
+
+#### Installation
+
+Make sure to install the dependencies
+
+```bash
+pnpm install
+```
+
+#### Development
+
+Start the development server on http://localhost:3000
+
+```bash
+pnpm dev
+```
+
+#### Production
+
+Build the application for production:
+
+```bash
+pnpm build
+```
